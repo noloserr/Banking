@@ -1,0 +1,26 @@
+﻿<Window x:Class="Banking.TransactionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Banking"
+        mc:Ignorable="d"
+        Title="transaction" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Картка джерела:" />
+            <TextBox x:Name="SourceCardTextBox" IsReadOnly="True"/>
+
+            <TextBlock Text="Номер картки одержувача:" />
+            <TextBox x:Name="TargetCardNumberTextBox"/>
+
+            <TextBlock Text="Сума:" />
+            <TextBox x:Name="AmountTextBox"/>
+
+            <TextBlock Text="Призначення:" />
+            <TextBox x:Name="PurposeTextBox"/>
+
+            <Button Content="Виконати транзакцію" Click="ExecuteTransaction_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
